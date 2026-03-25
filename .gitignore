@@ -1,0 +1,18 @@
+# Virtual Environment
+.venv/
+env/
+
+# Datasets (Do not upload to GitHub)
+Images/
+Labels.csv
+
+# Generated outputs (Change these names to match your actual folder names)
+Images_Processed/
+*.csv
+*.png
+*.jpg
+glaucoma_model_dinski.h5
+
+# Python cache files
+__pycache__/
+*.pyc
