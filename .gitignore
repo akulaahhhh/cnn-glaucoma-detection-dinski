@@ -1,12 +1,13 @@
 # Virtual Environment
 .venv/
+venv/
 env/
 
-# Datasets (Do not upload to GitHub)
+# Datasets
 Images/
 Labels.csv
 
-# Generated outputs (Change these names to match your actual folder names)
+# Generated outputs
 Images_Processed/
 *.csv
 *.png
