@@ -21,3 +21,4 @@
 
 ## 4. Pending Tasks / Next Steps
 - [ ] Handle Class Imbalance
+- [ ] Have to maximize Recall metric by reducing FN, since its clinical diagnosis its better to have some FP than FN

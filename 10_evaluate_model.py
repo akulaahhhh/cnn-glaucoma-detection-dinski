@@ -35,9 +35,17 @@ print("Confusion Matrix")
 print(cm)
 
 #Classification Report
-cr = classification_report(y_test, prediction_labels, labels=[0,1], target_names=["GON-", "GON+"])
+cr = classification_report(y_test, prediction_labels, labels=[0,1], target_names=["GON-", "GON+"], output_dict=True)
 print("Classification Report")
 print(cr)
+#Visualize Classification Report in Heatmap
+report_df = pd.DataFrame(cr).transpose()
+report_plot = report_df.iloc[:-3,:-1]
+plt.figure(figsize=(8, 6))
+sb.heatmap(report_plot, annot=True, cmap='Blues', fmt=".2f", linewidths=.5)
+plt.title('Classification Report Heatmap')
+plt.tight_layout()
+plt.show()
 
 #Visualize Confusion Matrix
 plt.figure(figsize=(8,6))
