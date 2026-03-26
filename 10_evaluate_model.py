@@ -44,7 +44,6 @@ plt.figure(figsize=(8,6))
 sb.heatmap(
     cm,
     annot = True,
-    # linecolor=True,
     cmap="Blues",
     fmt="d"
 )

@@ -28,7 +28,7 @@ for i, row in test_df.iterrows():
     x_test.append(img)
     y_test.append(row["label_numeric"])
 
-# Convert lists to numpy arrays for faster feeding into Keras
+# convert lists to numpy arrays for faster feeding into Keras
 x_train = np.array(x_train)
 y_train = np.array(y_train)
 x_test = np.array(x_test)
@@ -37,10 +37,7 @@ y_test = np.array(y_test)
 # Generate data augmentation
 data_augmentation = models.Sequential([
     layers.RandomFlip("horizontal_and_vertical"),
-    layers.RandomRotation(0.2),
-    # I commented out Rescaling here because you already rescaled by 
-    # doing `np.array(img) / 255.0` in the loops above! Doing both would break it :)
-    # layers.Rescaling(scale=1./255) 
+    layers.RandomRotation(0.2)
 ])
 
 # 1. Create model structure
@@ -62,7 +59,6 @@ def build_model():
 
 # Compile Model
 model = build_model()
-# You forgot to compile the model! This connects your optimizer and loss function.
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Implement Early Stopping
