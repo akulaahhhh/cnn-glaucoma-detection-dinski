@@ -10,7 +10,7 @@ print("--- BASIC STRUCTURE ---")
 print("First 5 rows")
 print(df.head())
 
-#V iew dataset info
+#View dataset info
 print("\nDataset Info")
 print(df.info())
 
